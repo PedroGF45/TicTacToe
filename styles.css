@@ -20,6 +20,9 @@
     height: 50px;
     width: 200px;
     border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
