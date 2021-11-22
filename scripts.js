@@ -5,6 +5,11 @@
         for (let i = 0; i < gameBoard.length; i++) {
             gameBoard[i].addEventListener("click", function() {
                 console.log(gameBoard[i]);
+                if (gameBoard[i].textContent == 0) {
+                    gameBoard[i].textContent += "X";
+                } else {
+                    console.log("ta fdd");
+                }
             })
         }
     }
