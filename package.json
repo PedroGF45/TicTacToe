@@ -1,0 +1,20 @@
+{
+  "name": "tictactoe",
+  "version": "1.0.0",
+  "description": "Tic-Tac-Toe project from The Odin Project curriculum. Started 17 november 2021.",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PedroGF45/TicTacToe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PedroGF45/TicTacToe/issues"
+  },
+  "homepage": "https://github.com/PedroGF45/TicTacToe#readme"
+}

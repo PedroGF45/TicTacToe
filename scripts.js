@@ -1,3 +1,7 @@
+
+
+
+
 (function board () { 
     const gameBoard = document.querySelectorAll(".grid-item");
     
