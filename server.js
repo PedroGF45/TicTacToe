@@ -44,5 +44,24 @@ app.post("/users", async (req, res) => {
     }
 })
 
+//login procedures, check if name and passwords are equal to the user created
+app.post("/users/login", async (req, res) => {
+    const user = users.find(user => user.name === req.body.name)
+    
+    //check if user exists
+    if (user == null) {
+        return res.status(400).send("User doesn't exist")
+    }
+    try {
+        if ( await bcrypt.compare(req.body.password, user.password)) { //check if hash is equal
+            res.send("Sucess");
+        } else {
+            res.send("Not Allowed");
+        }
+    } catch {
+        res.status(500).send();
+    }
+})
+
 //run the app on port 3000
 app.listen(3000);
