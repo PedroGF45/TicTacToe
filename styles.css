@@ -1,3 +1,51 @@
 *, *::before, *::after {
     box-sizing: border-box;
+    margin: 0;
+}
+
+#players {
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-evenly;
+    height: 50px;
+    width: 60%;
+    border: 1px solid black;
+}
+
+.player_1, .player_2 {
+    height: 50px;
+    width: 200px;
+    border: 1px solid red;
+}
+
+#first { grid-area: "1"; }
+#second { grid-area: "2"; }
+#third { grid-area: "3"; }
+#fourth { grid-area: "4"; }
+#fifth { grid-area: "5"; }
+#sixth { grid-area: "6"; }
+#seventh { grid-area: "7"; }
+#eighth { grid-area: "8"; }
+#nineth { grid-area: "9"; }
+
+.grid-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+#gameboard {
+    margin: 60px auto;
+    max-width: 450px;
+    display: grid;
+    grid-template: 
+    "1 2 3" 150px
+    "4 5 6" 150px
+    "7 8 9" 150px;
+    grid-gap: 1px;
+    border: 1px solid black;
+    background-color: black;
 }
