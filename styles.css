@@ -1,6 +1,7 @@
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
+    text-align: center;
 }
 
 #players {
@@ -16,6 +17,7 @@
     height: 50px;
     width: 200px;
     border: 1px solid red;
+
 }
 
 #first { grid-area: "1"; }
@@ -50,3 +52,9 @@
     background-color: black;
 }
 
+#reset {
+    display: block;
+    margin: 0 auto;
+    height: 50px;
+    width: 150px;
+}
