@@ -35,6 +35,10 @@
     margin-top: 10px;
 }
 
+#login a p {
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
 
 #players {
     margin: 50px auto;
