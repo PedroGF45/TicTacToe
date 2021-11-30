@@ -41,7 +41,7 @@
 }
 
 #createAccount {
-    height: 200px;
+    height: 250px;
 }
 
 #passwordReset {
@@ -52,13 +52,19 @@
     text-decoration: underline;
 }
 
-#passwordResetLink:hover, #createAccountLink:hover {
+#passwordResetLink:hover, #createAccountLink:hover, #backToLoginPassword:hover, #backToLoginAccount:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
 
 #game, #createAccount, #passwordReset {
     visibility: hidden;
+}
+
+#backToLoginPassword, #backToLoginAccount {
+    margin-top: 15px;
+    font-size: 0.8rem;
+    text-decoration: underline;
 }
 
 #players {
