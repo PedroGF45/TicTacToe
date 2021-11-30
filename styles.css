@@ -7,7 +7,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-#login, #createAccount {
+#login, #createAccount, #passwordReset {
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -24,17 +24,13 @@
     width: 40%;
 }
 
-#createAccount {
-    height: 200px;
-}
-
-#login input, #createAccount input {
+#login input, #createAccount input, #passwordReset input {
     margin-top: 10px;
     width: 70%;
     text-align: left;
 }
 
-#login button, #createAccount button {
+#login button, #createAccount button, #passwordReset button {
     width: 40%;
     margin-top: 20px;
 }
@@ -44,7 +40,15 @@
     margin-top: 10px;
 }
 
-#game, #createAccount {
+#createAccount {
+    height: 200px;
+}
+
+#passwordReset {
+    font-size: 15px;
+}
+
+#game, #createAccount, #passwordReset {
     visibility: hidden;
 }
 
