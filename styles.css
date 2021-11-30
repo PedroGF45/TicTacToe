@@ -40,6 +40,10 @@
     margin-top: 10px;
 }
 
+#game {
+    visibility: hidden;
+}
+
 #players {
     margin: 50px auto;
     display: flex;
