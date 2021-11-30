@@ -30,3 +30,17 @@ function getPlayers () {
 (function displayController () {
 
 })();
+
+const loginForm = document.getElementById("login");
+const passwordResetForm = document.getElementById("passwordReset");
+const createAccountForm = document.getElementById("createAccount");
+const getPassword = document.getElementById("passwordResetLink");
+
+
+getPassword.addEventListener("click", function showPasswordForm() {
+    loginForm.style.cssText = "visibility: hidden";
+    createAccountForm.style.cssText = "visibility: hidden";
+    passwordResetForm.style.cssText = "visibility: visible";
+});
+
+

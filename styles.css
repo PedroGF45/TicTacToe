@@ -48,6 +48,15 @@
     font-size: 15px;
 }
 
+#passwordResetLink, #createAccountLink {
+    text-decoration: underline;
+}
+
+#passwordResetLink:hover, #createAccountLink:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 #game, #createAccount, #passwordReset {
     visibility: hidden;
 }
