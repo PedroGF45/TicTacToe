@@ -34,13 +34,18 @@ function getPlayers () {
 const loginForm = document.getElementById("login");
 const passwordResetForm = document.getElementById("passwordReset");
 const createAccountForm = document.getElementById("createAccount");
-const getPassword = document.getElementById("passwordResetLink");
+const getPasswordResetLink = document.getElementById("passwordResetLink");
+const getCreateAccountLink = document.getElementById("createAccountLink");
 
-
-getPassword.addEventListener("click", function showPasswordForm() {
+getPasswordResetLink.addEventListener("click", function showPasswordForm() {
     loginForm.style.cssText = "visibility: hidden";
     createAccountForm.style.cssText = "visibility: hidden";
     passwordResetForm.style.cssText = "visibility: visible";
 });
 
+getCreateAccountLink.addEventListener("click", function showCreateAccountForm() {
+    loginForm.style.cssText = "visibility: hidden";
+    createAccountForm.style.cssText = "visibility: visible";
+    passwordResetForm.style.cssText = "visibility: hidden";
+});
 
