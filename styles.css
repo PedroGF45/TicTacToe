@@ -5,11 +5,10 @@
     margin: 0;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    
 }
 
-html {
-    background: linear-gradient(45deg, #757373, #060606)
+body {
+    background: linear-gradient(45deg, #757373, #060606);
 }
 
 h1, h2 {
@@ -21,7 +20,7 @@ h1, h2 {
 
 #login, #createAccount, #passwordReset {
     background-color: white;
-    border: 1px solid black;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,6 +40,7 @@ h1, h2 {
     margin-top: 10px;
     width: 70%;
     text-align: left;
+    border-radius: 5px;
 }
 
 #login button, #createAccount button, #passwordReset button {
@@ -50,7 +50,14 @@ h1, h2 {
     background-color: #47ADFA;
     font-weight: bold;
     border: 1px solid black;
+    border-radius: 10px;
 }
+
+#login button:hover, #createAccount button:hover, #passwordReset button:hover {
+    background-color: #98d0fa;
+    cursor: pointer;
+}
+
 
 #login a p {
     font-size: 0.8rem;
