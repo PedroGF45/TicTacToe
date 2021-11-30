@@ -7,7 +7,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-#login {
+#login, #createAccount {
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -20,19 +20,23 @@
     right: 0; 
     margin-left: auto; 
     margin-right: auto;
-    height: 150px;
+    height: 175px;
     width: 40%;
 }
 
-#login input {
+#createAccount {
+    height: 200px;
+}
+
+#login input, #createAccount input {
     margin-top: 10px;
     width: 70%;
     text-align: left;
 }
 
-#login button {
+#login button, #createAccount button {
     width: 40%;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 #login a p {
@@ -40,7 +44,7 @@
     margin-top: 10px;
 }
 
-#game {
+#game, #createAccount {
     visibility: hidden;
 }
 
