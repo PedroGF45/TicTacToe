@@ -1,35 +1,49 @@
+if (process.env.NODE_ENV !== "production") {
+    //if we are in development
+    require("dotenv").config(); //load all the environment variables and set them
+}
+
 const express = require("express"); //setup and pull express library
 const app = express(); //get the app to run the function
-
-//setup and pull bcrypt library
-const bcrypt = require("bcrypt");
-
-//setup and pull passport library
-const passport = require("passport");
+const bcrypt = require("bcrypt"); //setup and pull bcrypt library
+const passport = require("passport"); //setup and pull passport library
+const flash = require("express-flash"); //setup and pull express flash library
+const session = require("express-session"); //setup and pull express session library
 
 //call function from passport-config
 const initializePassport = require("./passport-config");
 initializePassport(
     passport,
-    email => users.find(user => user.email === email)
-});
+    email => users.find(user => user.email === email) //find user based on email
+);
+
+app.set("view-engine", "ejs");
 
 //take the form and abble to get variables on form
 app.use(express.urlencoded({ extended: false}));
 
 
+app.use(flash());
+app.use(session({
+    //encrypt all the info getting from environment variables
+    secret: process.env.SESSION_SECRET,
+    resave: false, //should we resave our session variables
+    saveUninitialized: false // do you wann save empty value if there's no value
+}))
+app.use(passport.initialize());
+app.use(passport.session());
+
 //create users to store the information. Should store this in a database
 const users = [];
-
-app.set("view-engine", "ejs");
 
 app.get("/", (req, res) => {
     res.render("index.ejs");
 });
 
-app.post("/login", (req,res) => {
-
-});
+app.post("/login", passport.authenticate("local", {
+    successRedirect: "/", //if success redirect to above
+    failureRedirect: "/login" //if sucess redirect to login 
+}));
 
 app.get("/login", (req, res) => {
     res.render("login.ejs");
