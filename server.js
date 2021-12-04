@@ -29,11 +29,19 @@ app.get("/register", (req, res) => {
     res.render("register.ejs");
 });
 
+//create hashed password. async is used because the functions are not syncronized and needs to await ofr the return
 app.post("/register", async (req,res) => {
     try {
         const hashedPassword = await bcrypt.hash(req.body.password, 10)
+        users.push({
+            id: Date.now().toString(), //if has database it's not needed
+            name: req.body.name,
+            email: req.body.email,
+            password: hashedPassword
+        })
+        res.redirect("/login"); // if succeeds redirect to login page
     } catch {
-
+        res.redirect("/register"); //if error redirects to register page
     }
 });
 
