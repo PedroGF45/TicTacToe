@@ -25,6 +25,9 @@ app.get("/register", (req, res) => {
     res.render("register.ejs");
 });
 
+app.get("/recover", (req,res) => {
+    res.render("recover.ejs");
+})
 
 //run the app on port 3000
 app.listen(3000);
