@@ -31,6 +31,8 @@ function getPlayers () {
 
 })();
 
+
+//login forms
 const loginForm = document.getElementById("login");
 const passwordResetForm = document.getElementById("passwordReset");
 const createAccountForm = document.getElementById("createAccount");
