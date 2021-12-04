@@ -42,7 +42,8 @@ app.get("/", (req, res) => {
 
 app.post("/login", passport.authenticate("local", {
     successRedirect: "/", //if success redirect to above
-    failureRedirect: "/login" //if sucess redirect to login 
+    failureRedirect: "/login", //if sucess redirect to login 
+    failureFlash: true
 }));
 
 app.get("/login", (req, res) => {
