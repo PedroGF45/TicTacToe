@@ -4,6 +4,16 @@ const app = express(); //get the app to run the function
 //setup and pull bcrypt library
 const bcrypt = require("bcrypt");
 
+//setup and pull passport library
+const passport = require("passport");
+
+//call function from passport-config
+const initializePassport = require("./passport-config");
+initializePassport(
+    passport,
+    email => users.find(user => user.email === email)
+});
+
 //take the form and abble to get variables on form
 app.use(express.urlencoded({ extended: false}));
 
